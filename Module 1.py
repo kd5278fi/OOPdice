@@ -45,7 +45,7 @@ def choice():
                 print ("You rolled a " + str(d1.number))
                 player1score.current_score_print()
 
-            else:
+            elif choice == 2:
                 d1.roll()
                 d2.roll()
                 player1score.add(d1.number)
@@ -53,6 +53,8 @@ def choice():
                 print ("You rolled a " + str(d1.number) + " and a "\
                    + str(d2.number))
                 player1score.current_score_print()
+            else :
+                print("Please only enter 1 or 2. Try agian:")
 
 
     if player1score.current_score() == 21:
@@ -62,9 +64,9 @@ def choice():
 
 def play_game():
     print ("Welcome to Black Jack Dice, " + player1 + "! The rules are simple: You start with" \
-          " two randomly thrown dice and your starting score is the value of" \
-          " the dice. You can choose to roll one or both of the dice to get" \
-          " more points. The goal is to get to 21 with out going over.")
+          " two randomly thrown dice ")
+    print ("and your starting score is the value of the dice. You can choose to roll one or both")
+    print ("of the dice to get more points. The goal is to get to 21 with out going over.")
 
     d1.roll()
     player1score.add(d1.number)
