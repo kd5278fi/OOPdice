@@ -10,7 +10,7 @@ class Die(object):
         self.number = number
 
     def roll(self):
-        self.number = randint(1, self.sides)
+        self.number = randint(1, self.sides+1)
         return self.number
 
 d1 = Die(6)
@@ -58,7 +58,7 @@ def choice():
 
 
 def play_game():
-    print ("Welcome back to Black Jack Dice, " + player1 + "! The rules are simple: You start with" \
+    print ("Welcome to Black Jack Dice, " + player1 + "! The rules are simple: You start with" \
           " two randomly thrown dice and you starting score is the value of" \
           " the dice. You can choose to roll one or both of the dice to get" \
           " more points. The goal is to get to 21 with out going over.")
@@ -69,7 +69,7 @@ def play_game():
     player1score.add(d2.number)
     print ("You rolled a " + str(d1.number) + " and a "\
            + str(d2.number))
-    player1score.current_scoreprint()
+    player1score.current_score_print()
 
     choice()
 
