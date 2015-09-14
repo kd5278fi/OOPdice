@@ -69,7 +69,7 @@ def play_game():
     player1score.add(d2.number)
     print ("You rolled a " + str(d1.number) + " and a "\
            + str(d2.number))
-    player1score.current_score_print()
+    player1score.current_scoreprint()
 
     choice()
 
