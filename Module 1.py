@@ -34,29 +34,24 @@ player1score= ScoreCard()
 
 
 def choice():
-    while player1score.current_score() < 22:
-        if player1score.current_score() == 21:
-            break
-        else:
-            choice=int(input("How many dice would you like to roll again?"))
-            if choice == 1:
-                d1.roll()
-                player1score.add(d1.number)
-                print ("You rolled a " + str(d1.number))
-                player1score.current_score_print()
+    while player1score.current_score() < 21:
+        choice=int(input("How many dice would you like to roll?"))
+        if choice == 1:
+            d1.roll()
+            player1score.add(d1.number)
+            print ("You rolled a " + str(d1.number))
+            player1score.current_score_print()
 
-            elif choice == 2:
-                d1.roll()
-                d2.roll()
-                player1score.add(d1.number)
-                player1score.add(d2.number)
-                print ("You rolled a " + str(d1.number) + " and a "\
-                   + str(d2.number))
-                player1score.current_score_print()
-            else :
-                print("Please only enter 1 or 2. Try agian:")
-
-
+        elif choice == 2:
+            d1.roll()
+            d2.roll()
+            player1score.add(d1.number)
+            player1score.add(d2.number)
+            print ("You rolled a " + str(d1.number) + " and a "\
+               + str(d2.number))
+            player1score.current_score_print()
+        else :
+            print("Please only enter 1 or 2. Try agian:")
     if player1score.current_score() == 21:
         print ("You've won!")
     else:
